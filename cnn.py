@@ -134,3 +134,5 @@ print(test_y[:10].cpu().numpy(), 'real number')
 time_end = time.time()
 
 print(time_end-time_start,'seconds')
+
+#我再试试merge
