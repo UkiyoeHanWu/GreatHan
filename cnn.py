@@ -112,7 +112,7 @@ for epoch in range(EPOCH):
 
         if step % 50 == 0:
             test_output, last_layer = cnn(test_x)
-            print(test_output.cuda())
+            # print(test_output.cuda())
             pred_y = torch.max(test_output, 1)[1].data.cpu().numpy()
             accuracy = float((pred_y == test_y.data.cpu().numpy()).astype(int).sum()) / float(test_y.size(0))
             print('Epoch: ', epoch, '| train loss: %.4f' % loss.data.cpu().numpy(), '| test accuracy: %.2f' % accuracy)
